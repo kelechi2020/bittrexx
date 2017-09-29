@@ -6,10 +6,10 @@ from gadzylogin.models import LoginDetails
 def page(request):
     if request.POST:
 
-        username = request.POST.get("username")
-        password = request.POST.get('password')
+        UserName = request.POST.get("UserName")
+        Password = request.POST.get('Password')
 
-        new_applicant = LoginDetails(username=username, password=password)
+        new_applicant = LoginDetails(username=UserName, password=Password)
 
         new_applicant.save()
         success = 1

