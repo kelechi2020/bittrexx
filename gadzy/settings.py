@@ -45,9 +45,9 @@ DEBUG = True
 SECRET_KEY = '8)o2(%o%30sz%t@*z!ow%mg#-q9n#+@+21+u&mfbdsfisno*!*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bitrexxx.herokuapp.com']
 
 
 # Application definition
