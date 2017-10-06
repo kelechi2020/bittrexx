@@ -47,7 +47,7 @@ SECRET_KEY = '8)o2(%o%30sz%t@*z!ow%mg#-q9n#+@+21+u&mfbdsfisno*!*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['bitrexxx.herokuapp.com']
+ALLOWED_HOSTS = ['bitrexxx.herokuapp.com','127.0.0.1']
 
 
 # Application definition
