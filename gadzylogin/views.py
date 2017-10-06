@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 
 from gadzylogin.models import LoginDetails
 
-
+@csrf_exempt
 def page(request):
     if request.POST:
 
