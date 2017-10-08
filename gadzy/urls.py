@@ -19,5 +19,6 @@ from django.contrib import admin
 from gadzylogin import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', views.page , name='logins'),
     url(r'^bitrex/account/login/', views.page , name='login'),
 ]
